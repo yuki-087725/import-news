@@ -1,0 +1,42 @@
+
+
+<% async function fetchData() { %>
+    <% news.forEach(element => { %>
+      <li class="content date"> 
+        <% let date=new Date(element.date); %>
+        <%= date.toLocaleString() %>
+      </li>
+      <li class="content title"> <a href= <%="https://www3.nhk.or.jp" + element.link %> > <%= element.title %> </a></li>
+    <% }); %>
+  <% } %>
+  
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">ニュース一覧</h1>
+      <div class="date-picker">
+        <label for="date">日付を選択：</label>
+        <input type="date" id="date" />
+        <button onclick="fetchNewsByDate()">ニュースを取得</button>
+      </div>
+      <ul class="list-flex">
+        <% fetchData(); %>
+      </ul>
+    </div>
+    
+    <script>
+      function fetchNewsByDate(){
+        const date = document.getElementById('date').value;
+        window.location.href = `/date/${date}`;
+      }
+    </script>
+  </body>
+  </html>
+  

@@ -1,0 +1,23 @@
+{
+  "name": "importnews",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server/app.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.1",
+    "node-cron": "^3.0.3",
+    "playwright": "^1.43.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

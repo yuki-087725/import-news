@@ -1,0 +1,62 @@
+body{
+    background-color: rgb(2, 21, 42);
+    font-family: Arial, sans-serif;
+}
+
+.container{
+    width: 1000px;
+    margin: 50px auto 50px;
+    padding: 20px ;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+.heading{
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.date-picker{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.date-picker label{
+    margin-right: 10px;
+}
+.date-picker button{
+    margin-left: 10px;
+}
+
+
+ul.list-flex{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 150px;
+    justify-content: space-between;
+
+    
+}
+li.content{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+li.content.date{
+    width: 20%;
+    font-weight: bold;
+
+}
+li.content.title{
+    width: 70%;
+    text-align: left;
+    font-weight: bold;
+}
+li.content.title a{
+    text-decoration: none;
+    color: black;
+}
