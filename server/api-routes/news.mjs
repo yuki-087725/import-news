@@ -1,12 +1,16 @@
 import express from "express";
 import { News } from "../models/model.mjs";
+import env from "dotenv";
+env.config();
 
 const router = express.Router();
+
+const hostName = process.env.HOST_NAME;
 
 router.get("/", async (req, res) => {
   try {
     const news = await News.find().sort({ updatedAt: -1 });
-    res.render("index.ejs", { news });
+    res.render("index.ejs", { news, hostName });
   } catch (error) {
     console.error("Error fetching data:", error);
     res.status(500).send("Error fetching data");
